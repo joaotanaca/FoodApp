@@ -6,6 +6,7 @@ import Document, {
     DocumentContext,
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import Global from "styles/global";
 
 export default class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {
@@ -40,6 +41,7 @@ export default class MyDocument extends Document {
                     <link rel="shortcut icon" href="images/favicon.png" />
                 </Head>
                 <body>
+                    <Global />
                     <Main />
                     <NextScript />
                 </body>
