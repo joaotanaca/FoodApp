@@ -1,10 +1,11 @@
 import React from "react";
+import { SvgPropsT } from "..";
 
-const buy: React.FC = () => {
+const buy: React.FC<SvgPropsT> = ({ size = 0 }) => {
     return (
         <svg
-            width="21"
-            height="17"
+            width={size}
+            height={size * 0.81}
             viewBox="0 0 21 17"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

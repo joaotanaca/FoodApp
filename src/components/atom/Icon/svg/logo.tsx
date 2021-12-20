@@ -1,10 +1,11 @@
 import React from "react";
+import { SvgPropsT } from "..";
 
-const logo: React.FC = () => {
+const logo: React.FC<SvgPropsT> = ({ size = 0 }) => {
     return (
         <svg
-            width="150"
-            height="163"
+            width={size * 0.92}
+            height={size}
             viewBox="0 0 150 163"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

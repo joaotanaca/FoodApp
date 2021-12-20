@@ -1,16 +1,17 @@
 import React from "react";
+import { SvgPropsT } from "..";
 
-const arrowLeft: React.FC = () => {
+const menu: React.FC<SvgPropsT> = ({ size = 0 }) => {
     return (
         <svg
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
+            width={size}
+            height={size * 0.68}
+            viewBox="0 0 25 17"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
             <path
-                d="M7 13L1 7L7 1"
+                d="M1.59857 8.33333H13.5M1.59857 1H23.5986M1.59857 15.6667H23.5986"
                 stroke="black"
                 stroke-width="2"
                 stroke-linecap="round"
@@ -20,4 +21,4 @@ const arrowLeft: React.FC = () => {
     );
 };
 
-export default arrowLeft;
+export default menu;

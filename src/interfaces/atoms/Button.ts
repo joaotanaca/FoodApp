@@ -5,5 +5,5 @@ export type ButtonColorsProps = {
 };
 
 export type PropsT = HTMLAttributes<HTMLButtonElement> & {
-    colors: "primary" | "secondary";
+    colors?: "primary" | "secondary";
 };
