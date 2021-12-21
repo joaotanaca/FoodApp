@@ -24,5 +24,11 @@ export default css`
         src: local(SF-Pro), url(/font/SF-Pro-Rounded-Bold.ttf);
         font-weight: 700;
     }
+
+    @font-face {
+        font-family: "SF-Pro";
+        src: local(SF-Pro), url(/font/SF-Pro-Rounded-Heavy.ttf);
+        font-weight: 800;
+    }
 `;
 

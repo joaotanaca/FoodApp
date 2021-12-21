@@ -13,19 +13,37 @@ const TextComponent = styled.p<{ colorText: string }>`
     color: ${({ colorText }) => colorText};
 `;
 
-const Text: React.FC<{ weight?: FontWeight; size?: FontSize; color?: Colors }> =
-    ({ children, weight = "normal", size = "base", color = "black" }) => {
-        const className = useMemo(
-            () => `${fontWeight[weight]} ${fontSize[size]}`,
-            [weight, size],
-        );
+const Text: React.FC<{
+    weight?: FontWeight;
+    size?: FontSize;
+    color?: Colors;
+    className?: string;
+    onClick?: (
+        event: React.MouseEvent<HTMLParagraphElement, MouseEvent>,
+    ) => void;
+}> = ({
+    children,
+    weight = "normal",
+    size = "base",
+    color = "black",
+    className,
+    onClick,
+}) => {
+    const classNameText = useMemo(
+        () => `${fontWeight[weight]} ${fontSize[size]}`,
+        [weight, size],
+    );
 
-        const colorSelected = useMemo(() => colors[color], [color]);
-        return (
-            <TextComponent colorText={colorSelected} className={className}>
-                {children}
-            </TextComponent>
-        );
-    };
+    const colorSelected = useMemo(() => colors[color], [color]);
+    return (
+        <TextComponent
+            colorText={colorSelected}
+            onClick={onClick}
+            className={`${className} ${classNameText}`}
+        >
+            {children}
+        </TextComponent>
+    );
+};
 
 export default Text;

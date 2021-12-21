@@ -13,7 +13,7 @@ const Home: React.FC = () => {
                 </div>
             </div>
             <div className="row-span-1 z-10">
-                <Text size="6xl" weight="semibold" color="white">
+                <Text size="6xl" weight="extrabold" color="white">
                     Food for Everyone
                 </Text>
             </div>
@@ -21,7 +21,7 @@ const Home: React.FC = () => {
                 <img src="toys.png" alt="peoples" />
             </div>
             <div className="row-span-1 row-start-6">
-                <Button className="w-full" colors="secondary">
+                <Button className="w-full" colors="secondary" href="/sign">
                     <Text size="lg" weight="semibold" color="primary">
                         Get starteed
                     </Text>
