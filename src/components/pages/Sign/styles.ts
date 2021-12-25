@@ -12,6 +12,8 @@ export const ContainerHeader = styled.div.attrs({
     }
 `;
 
-export const ContainerBottom = styled.div`
+export const ContainerBottom = styled.div.attrs({
+    className: "mx-auto mt-16 px-12 flex flex-col gap-11",
+})`
     height: 60vh;
 `;

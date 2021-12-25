@@ -1,4 +1,5 @@
 import Icon from "components/atom/Icon";
+import Input from "components/atom/Input";
 import Text from "components/atom/Text";
 import React, { useCallback, useState } from "react";
 
@@ -19,9 +20,11 @@ const Sign: React.FC = () => {
                     <Text
                         weight="semibold"
                         size="lg"
-                        className={`${
-                            active === "login" && "border-b-4"
-                        } cursor-pointer pb-4 transition-all duration-150`}
+                        className={
+                            active === "login"
+                                ? "border-b-4 cursor-pointer pb-4 transition-all duration-150"
+                                : "cursor-pointer pb-4 transition-all duration-150"
+                        }
                         onClick={() => handleActive("login")}
                     >
                         Login
@@ -29,16 +32,21 @@ const Sign: React.FC = () => {
                     <Text
                         weight="semibold"
                         size="lg"
-                        className={`${
-                            active === "signup" && "border-b-4"
-                        } cursor-pointer pb-4 transition-all duration-150`}
+                        className={
+                            active === "signup"
+                                ? "border-b-4 cursor-pointer pb-4 transition-all duration-150"
+                                : "cursor-pointer pb-4 transition-all duration-150"
+                        }
                         onClick={() => handleActive("signup")}
                     >
                         Sign-up
                     </Text>
                 </div>
             </ContainerHeader>
-            <ContainerBottom />
+            <ContainerBottom>
+                <Input name="email" placeholder="Email address" type="email" />
+                <Input name="password" placeholder="Password" type="password" />
+            </ContainerBottom>
         </>
     );
 };

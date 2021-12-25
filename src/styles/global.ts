@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 import fonts from "./fonts";
 import { Theme } from "./theme";
 
@@ -10,8 +10,10 @@ export default createGlobalStyle`
         font-family: 'SF-Pro';
         font-weight: 400;
     }
-
-    body{
-        background-color:${({ theme }) => (theme as Theme).background};
-    }
+    ${({ theme }) => css`
+        body {
+            background-color: ${theme.background};
+        }
+    `}
+    
 `;

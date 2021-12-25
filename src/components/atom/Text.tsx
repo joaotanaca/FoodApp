@@ -26,12 +26,12 @@ const Text: React.FC<{
     weight = "normal",
     size = "base",
     color = "black",
-    className,
+    className = "",
     onClick,
 }) => {
     const classNameText = useMemo(
-        () => `${fontWeight[weight]} ${fontSize[size]}`,
-        [weight, size],
+        () => `${className} ${fontWeight[weight]} ${fontSize[size]}`,
+        [weight, size, className],
     );
 
     const colorSelected = useMemo(() => colors[color], [color]);
@@ -39,7 +39,7 @@ const Text: React.FC<{
         <TextComponent
             colorText={colorSelected}
             onClick={onClick}
-            className={`${className} ${classNameText}`}
+            className={classNameText}
         >
             {children}
         </TextComponent>
