@@ -12,8 +12,11 @@ export const ContainerHeader = styled.div.attrs({
     }
 `;
 
-export const ContainerBottom = styled.div.attrs({
-    className: "mx-auto mt-16 px-12 flex flex-col gap-11",
+export const ContainerBottom = styled.form.attrs({
+    className: "mx-auto pt-16 pb-10 px-12 flex flex-col justify-between",
 })`
     height: 60vh;
+    a {
+        color: ${({ theme }) => theme.accentColor};
+    }
 `;

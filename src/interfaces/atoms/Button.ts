@@ -7,4 +7,5 @@ export type ButtonColorsProps = {
 export type PropsT = HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> & {
     colors?: "primary" | "secondary";
     href?: string;
+    type?: "button" | "submit" | "reset";
 };

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     label {
         color: ${({ theme }) => theme.darkGray};
-        top: 50%;
+        top: calc(50% + -3px);
         transform: translateY(-50%);
         &.active {
             top: -13px;
