@@ -8,6 +8,7 @@ import Note from "./note";
 import Offer from "./offer";
 import Profile from "./profile";
 import Security from "./security";
+import Home from "./home";
 
 export default {
     arrowLeft: ArrowLeft,
@@ -20,4 +21,5 @@ export default {
     offer: Offer,
     profile: Profile,
     security: Security,
+    home:Home
 };
