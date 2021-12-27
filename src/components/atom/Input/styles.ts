@@ -5,8 +5,9 @@ export const Container = styled.div`
         color: ${({ theme }) => theme.darkGray};
         top: calc(50% + -3px);
         transform: translateY(-50%);
+        z-index: -1;
         &.active {
-            top: -13px;
+            top: -15px;
             font-size: 18px;
         }
     }
